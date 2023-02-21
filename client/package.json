@@ -1,0 +1,17 @@
+{
+  "name": "automation",
+  "productName": "Soccer News Automation",
+  "version": "1.0.0",
+  "description": "Learning Python Automation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^23.1.0",
+    "python-shell": "^5.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
