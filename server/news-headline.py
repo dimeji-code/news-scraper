@@ -3,11 +3,12 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-website = 'https://www.thesun.co.uk/sport/football/'
-path='/Users/firefly2/Downloads/chromedriver_mac64/chromedriver'
+from webdriver_manager.chrome import ChromeDriverManager
 
-service= Service(executable_path = path)
-driver = webdriver.Chrome( service = service )
+website = 'https://www.thesun.co.uk/sport/football/'
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
 driver.get(website)
 
 items = driver.find_elements(By.XPATH, '//div[@class="teaser-item teaser__small  theme-football"]')
